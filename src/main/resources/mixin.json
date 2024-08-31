@@ -1,0 +1,14 @@
+{
+    "required": true,
+    "minVersion": "0.8.2",
+    "package": "ma.mixin",
+    "compatibilityLevel": "JAVA_11",
+    "mixins": [
+    ],
+    "client": [
+    ],
+    "server": [],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

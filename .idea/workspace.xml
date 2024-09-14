@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a9f385d-898e-437b-bfef-189cf6d84fff" name="Changes" comment="M0 简单物品" />
+    <list default="true" id="9a9f385d-898e-437b-bfef-189cf6d84fff" name="Changes" comment="M1 数据生成">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Client.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Datagen.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ma/lang/en_us.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ma/lang/zh_cn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ma/models/item/fluix_crystal.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +58,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -56,7 +66,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="M0-简单物品" />
+        <entry key="$PROJECT_DIR$" value="M0" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,29 +98,35 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.ModdingMA [runClient].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ModdingMA [runDatagen].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/stupid_coder_jyy/Desktop/Minecraft/ModdingMA&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/stupid_coder_jyy/Desktop/Minecraft/ModdingMA/src/main/java/ma/util&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.5471264&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\stupid_coder_jyy\Desktop\Minecraft\ModdingMA\src\main\java\ma\util" />
       <recent name="C:\Users\stupid_coder_jyy\Desktop\Minecraft\FabricExampleMod\src\modding\resources" />
       <recent name="C:\Users\stupid_coder_jyy\Desktop\Minecraft\FabricExampleMod\src\modding\java" />
       <recent name="C:\Users\stupid_coder_jyy\Desktop\Minecraft\FabricExampleMod\src\modding" />
       <recent name="C:\Users\stupid_coder_jyy\Desktop\Minecraft\FabricExampleMod\src\main\resources\assets\example\textures\block" />
-      <recent name="C:\Users\stupid_coder_jyy\Desktop\Minecraft\FabricExampleMod\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\stupid_coder_jyy\Desktop\Minecraft\ModdingMA\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ma.util.datagen" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.ModdingMA [runClient]">
+  <component name="RunManager" selected="Gradle.ModdingMA [runDatagen]">
     <configuration name="ModdingMA [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -133,8 +149,34 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="ModdingMA [runDatagen]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runDatagen" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ModdingMA [runDatagen]" />
+        <item itemvalue="Gradle.ModdingMA [runClient]" />
+        <item itemvalue="Gradle.ModdingMA [runClient]" />
+        <item itemvalue="Gradle.ModdingMA [runClient]" />
         <item itemvalue="Gradle.ModdingMA [runClient]" />
       </list>
     </recent_temporary>
@@ -210,7 +252,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="M0" />
                       </list>
                     </value>
                   </entry>

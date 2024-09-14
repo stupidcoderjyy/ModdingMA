@@ -16,7 +16,7 @@
 	"entrypoints": {
 		"client": ["ma.core.ModClient"],
 		"server": ["com.example.core.ExampleServer"],
-        "fabric-datagen": ["com.stupidcoderx.modding.datagen.DataGenEntryPoint"]
+        "fabric-datagen": ["ma.datagen.DataGenEntryPoint"]
     },
 	"mixins": ["mixin.json"],
 	"depends": {

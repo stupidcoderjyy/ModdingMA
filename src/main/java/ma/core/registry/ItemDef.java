@@ -3,6 +3,7 @@ package ma.core.registry;
 import ma.core.Mod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 
 import java.util.ArrayList;
@@ -19,16 +20,16 @@ public class ItemDef<I extends Item> implements ItemLike {
         MOD_ITEMS.add(this);
     }
 
-    public ItemDef(String id, I item) {
-        this(Mod.modLoc(id), item);
-    }
-
     @Override
     public Item asItem() {
         return item;
     }
 
-    public static ItemDef<Item> simple(String id) {
-        return new ItemDef<>(id, new Item(new Item.Properties()));
+    public ItemStack stack(int size) {
+        return new ItemStack(item, size);
+    }
+
+    public static ItemDef<Item> simpleItem(String id) {
+        return new ItemDef<>(Mod.modLoc(id), new Item(new Item.Properties()));
     }
 }

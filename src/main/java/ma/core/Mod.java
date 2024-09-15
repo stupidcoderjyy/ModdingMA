@@ -1,5 +1,6 @@
 package ma.core;
 
+import ma.core.registry.ModBlocks;
 import ma.core.registry.ModItems;
 import net.minecraft.resources.ResourceLocation;
 
@@ -8,7 +9,9 @@ public class Mod {
 
     protected Mod() {
         ModItems.init();
+        ModBlocks.init();
         ModRegistry.registerItems();
+        ModRegistry.registerBlocks();
     }
 
     public static ResourceLocation modLoc(String path) {

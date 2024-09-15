@@ -1,4 +1,4 @@
-package ma.core.registry;
+package ma.core.element;
 
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import org.jetbrains.annotations.Nullable;

@@ -1,8 +1,8 @@
 package ma.datagen.model;
 
 import ma.core.Mod;
-import ma.core.registry.BlockDef;
-import ma.core.registry.ItemDef;
+import ma.core.element.BlockDef;
+import ma.core.element.ItemDef;
 import ma.core.registry.ModBlocks;
 import ma.core.registry.ModItems;
 import ma.util.datagen.DataProviders;

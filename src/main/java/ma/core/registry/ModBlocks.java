@@ -1,5 +1,6 @@
 package ma.core.registry;
 
+import ma.core.element.BlockDef;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;

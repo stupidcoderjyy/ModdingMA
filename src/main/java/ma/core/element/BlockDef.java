@@ -1,4 +1,4 @@
-package ma.core.registry;
+package ma.core.element;
 
 import ma.core.Mod;
 import net.minecraft.resources.ResourceLocation;

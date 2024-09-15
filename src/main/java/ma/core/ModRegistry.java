@@ -1,7 +1,8 @@
 package ma.core;
 
-import ma.core.registry.BlockDef;
-import ma.core.registry.ItemDef;
+import ma.core.element.BlockDef;
+import ma.core.element.ItemDef;
+import ma.core.registry.ModCreativeTabs;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 
@@ -18,5 +19,9 @@ public class ModRegistry {
             Registry.register(BuiltInRegistries.BLOCK, def.loc, def.block);
         }
         BlockDef.MOD_BLOCKS.clear();
+    }
+
+    public static void registerCreativeTabs() {
+        ModCreativeTabs.MAIN.register();
     }
 }

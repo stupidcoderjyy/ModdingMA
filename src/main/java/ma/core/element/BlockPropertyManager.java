@@ -1,16 +1,15 @@
 package ma.core.element;
 
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
-
 import java.util.Arrays;
 import java.util.Stack;
 import java.util.function.Consumer;
+import net.minecraft.block.AbstractBlock.Settings;
 
 class BlockPropertyManager {
     private final Stack<BlockProperty> properties = new Stack<>();
 
     @SafeVarargs
-    final void pushProp(boolean inherit, boolean removeOnGet, Consumer<Properties> ... modifiers) {
+    final void pushProp(boolean inherit, boolean removeOnGet, Consumer<Settings> ... modifiers) {
         BlockProperty parentBp = (inherit && !properties.empty()) ? properties.peek() : null;
         BlockProperty bp = new BlockProperty(removeOnGet, parentBp);
         bp.modifiers.addAll(Arrays.asList(modifiers));
@@ -25,9 +24,9 @@ class BlockPropertyManager {
         properties.push(properties.peek().dup());
     }
 
-    Properties build() {
+    Settings build() {
         if (properties.empty()) {
-            return Properties.of();
+            return Settings.create();
         }
         BlockProperty bp = properties.peek();
         if (bp.removeOnGet) {

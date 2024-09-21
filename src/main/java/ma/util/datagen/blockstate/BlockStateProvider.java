@@ -4,15 +4,14 @@ import ma.util.datagen.ModDataProvider;
 import ma.util.datagen.ResourceType;
 import ma.util.datagen.blockstate.multipart.MultiPartBlockStateBuilder;
 import ma.util.datagen.blockstate.variants.VariantsBlockStateBuilder;
-import net.minecraft.data.CachedOutput;
-import net.minecraft.resources.ResourceLocation;
-
+import net.minecraft.data.DataWriter;
+import net.minecraft.util.Identifier;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class BlockStateProvider extends ModDataProvider<BlockStateProvider> {
-    private final Map<ResourceLocation, IBuilderElement> stateBuilders = new HashMap<>();
+    private final Map<Identifier, IBuilderElement> stateBuilders = new HashMap<>();
 
     public BlockStateProvider() {
         super(ResourceType.BLOCK_STATE);
@@ -23,14 +22,14 @@ public class BlockStateProvider extends ModDataProvider<BlockStateProvider> {
      * @param loc 方块资源路径
      * @return 构造器
      */
-    public VariantsBlockStateBuilder variants(ResourceLocation loc) {
+    public VariantsBlockStateBuilder variants(Identifier loc) {
         ensureUnlocked();
         var builder = new VariantsBlockStateBuilder();
         stateBuilders.put(loc, builder);
         return builder;
     }
 
-    public MultiPartBlockStateBuilder multipart(ResourceLocation loc) {
+    public MultiPartBlockStateBuilder multipart(Identifier loc) {
         ensureUnlocked();
         var builder = new MultiPartBlockStateBuilder();
         stateBuilders.put(loc, builder);
@@ -38,7 +37,7 @@ public class BlockStateProvider extends ModDataProvider<BlockStateProvider> {
     }
 
     @Override
-    public CompletableFuture<?> run(CachedOutput cache) {
+    public CompletableFuture<?> run(DataWriter cache) {
         return getCollectedTask(stateBuilders.entrySet(),
                 e -> getJsonWritingTask(e.getKey(), e.getValue().toJson(), cache));
     }

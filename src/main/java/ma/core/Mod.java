@@ -4,7 +4,7 @@ import ma.core.element.ItemDef;
 import ma.core.registry.ModBlocks;
 import ma.core.registry.ModCreativeTabs;
 import ma.core.registry.ModItems;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Identifier;
 
 public class Mod {
     public static final String MOD_ID = "ma";
@@ -19,19 +19,19 @@ public class Mod {
         ModRegistry.registerCreativeTabs();
     }
 
-    public static ResourceLocation modLoc(String path) {
-        return new ResourceLocation(MOD_ID, path);
+    public static Identifier modLoc(String path) {
+        return new Identifier(MOD_ID, path);
     }
 
-    public static ResourceLocation vanillaLoc(String path) {
-        return new ResourceLocation(path);
+    public static Identifier vanillaLoc(String path) {
+        return new Identifier(path);
     }
 
-    public static ResourceLocation expandLoc(String prefix, ResourceLocation loc) {
+    public static Identifier expandLoc(String prefix, Identifier loc) {
         String path = loc.getPath();
         if (path.indexOf('/') > 0) {
             return loc;
         }
-        return new ResourceLocation(loc.getNamespace(), prefix + "/" + path);
+        return new Identifier(loc.getNamespace(), prefix + "/" + path);
     }
 }

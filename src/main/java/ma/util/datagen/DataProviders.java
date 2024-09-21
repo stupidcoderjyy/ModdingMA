@@ -5,7 +5,7 @@ import ma.util.datagen.lang.LocalizationProvider;
 import ma.util.datagen.model.ModelProvider;
 import ma.util.datagen.tag.BlockTag;
 import ma.util.datagen.tag.TagsProvider;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Identifier;
 
 /**
  * 模组数据提供器
@@ -28,7 +28,7 @@ public class DataProviders {
 
     /**
      * 方块状态文件生成器
-     * <p>使用{@link BlockStateProvider#variants(ResourceLocation)}创建一个枚举方块状态文件
+     * <p>使用{@link BlockStateProvider#variants(Identifier)}创建一个枚举方块状态文件
      */
     public static final BlockStateProvider BLOCK_STATE = new BlockStateProvider();
 

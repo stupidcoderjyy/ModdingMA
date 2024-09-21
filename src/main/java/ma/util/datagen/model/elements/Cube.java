@@ -3,12 +3,11 @@ package ma.util.datagen.model.elements;
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.phys.shapes.VoxelShape;
-
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import net.minecraft.block.Block;
+import net.minecraft.util.shape.VoxelShape;
 
 /**
  * 立方体，可以为其绑定材质
@@ -200,7 +199,7 @@ public class Cube {
     }
 
     VoxelShape toVoxelShape() {
-        return Block.box(data.area[0], data.area[1], data.area[2], data.area[3], data.area[4], data.area[5]);
+        return Block.createCuboidShape(data.area[0], data.area[1], data.area[2], data.area[3], data.area[4], data.area[5]);
     }
 
     JsonObject toJson() {

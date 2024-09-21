@@ -1,7 +1,7 @@
 package ma.core.registry;
 
 import ma.core.element.ItemDef;
-import net.minecraft.world.item.Item;
+import net.minecraft.item.Item;
 
 public class ModItems {
     public static final ItemDef<Item> FLUIX_CRYSTAL;

@@ -2,12 +2,11 @@ package ma.util.datagen;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonElement;
-import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.DataOutput;
 import net.minecraft.data.DataProvider;
-import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
-
+import net.minecraft.data.DataWriter;
+import net.minecraft.util.Identifier;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -21,7 +20,7 @@ import java.util.function.Function;
  */
 public abstract class ModDataProvider<T extends ModDataProvider<T>> implements DataProvider {
     private static final List<ModDataProvider<?>> PROVIDERS = new ArrayList<>();
-    protected PackOutput output;
+    protected DataOutput output;
     private final ResourceType resourceType;
     private boolean locked = false;
 
@@ -39,21 +38,21 @@ public abstract class ModDataProvider<T extends ModDataProvider<T>> implements D
      * @param output 输出路径（由MC提供）
      * @return 调用者
      */
-    protected T init(PackOutput output) {
+    protected T init(DataOutput output) {
         this.output = output;
         this.locked = true;
         return (T)this;
     }
 
     protected CompletableFuture<?> getJsonWritingTask(
-            ResourceLocation loc,
+            Identifier loc,
             JsonElement obj,
-            CachedOutput cache) {
-        Path target = output.getOutputFolder(resourceType.type)
+            DataWriter cache) {
+        Path target = output.resolvePath(resourceType.type)
                 .resolve(loc.getNamespace())
                 .resolve(resourceType.pathPrefix)
                 .resolve(loc.getPath() + resourceType.pathSuffix);
-        return DataProvider.saveStable(cache, obj, target);
+        return DataProvider.writeToPath(cache, obj, target);
     }
 
     protected <U> CompletableFuture<?> getCollectedTask(
@@ -74,7 +73,7 @@ public abstract class ModDataProvider<T extends ModDataProvider<T>> implements D
         Preconditions.checkState(!locked, "locked:" + getName());
     }
 
-    public static void registerProviders(DataGenerator.PackGenerator pack) {
+    public static void registerProviders(DataGenerator.Pack pack) {
         PROVIDERS.forEach(p -> pack.addProvider(p::init));
     }
 }

@@ -1,11 +1,10 @@
 package ma.core.registry;
 
 import ma.core.element.BlockDef;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
-
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
+import net.minecraft.sound.BlockSoundGroup;
 import java.util.function.Consumer;
 
 public class ModBlocks {
@@ -21,10 +20,10 @@ public class ModBlocks {
     }
 
     private static class Types {
-        public static final Consumer<BlockBehaviour.Properties> QUARTZ = p -> p
+        public static final Consumer<AbstractBlock.Settings> QUARTZ = p -> p
                 .strength(3.0f,5.0f)
-                .mapColor(MapColor.QUARTZ)
-                .sound(SoundType.STONE)
-                .requiresCorrectToolForDrops();
+                .mapColor(MapColor.OFF_WHITE)
+                .sounds(BlockSoundGroup.STONE)
+                .requiresTool();
     }
 }

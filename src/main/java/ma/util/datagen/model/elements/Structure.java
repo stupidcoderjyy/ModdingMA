@@ -2,12 +2,11 @@ package ma.util.datagen.model.elements;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonArray;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.shapes.VoxelShape;
-
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 
 /**
  * 可以储存由若干{@link Cube}组成的结构。结构拥有固定的坐标系，原点为workspace中
@@ -406,13 +405,13 @@ public class Structure {
      */
     public VoxelShape toVoxelShape() {
         if (ctx.cubes.isEmpty()) {
-            return Shapes.empty();
+            return VoxelShapes.empty();
         }
         VoxelShape shape = null;
         for (Cube c : ctx.cubes) {
             shape = shape == null ?
                     c.toVoxelShape() :
-                    Shapes.or(shape, c.toVoxelShape());
+                    VoxelShapes.union(shape, c.toVoxelShape());
         }
         return shape;
     }

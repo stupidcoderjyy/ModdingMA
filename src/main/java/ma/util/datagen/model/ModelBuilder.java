@@ -4,27 +4,28 @@ import com.google.common.base.Preconditions;
 import com.google.gson.JsonObject;
 import ma.core.Mod;
 import ma.util.datagen.model.elements.Structure;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class ModelBuilder extends ModelFile{
-    public final Map<String, ResourceLocation> textures = new HashMap<>();
+    public final Map<String, Identifier> textures = new HashMap<>();
     private final Map<String, Display> transforms = new HashMap<>();
     private final String pathPrefix;
     private Structure structure;
-    private ResourceLocation loaderLoc;
+    private Identifier loaderLoc;
     @Nullable
     private ModelFile parent;
 
-    protected ModelBuilder(String pathPrefix, ResourceLocation location) {
+    protected ModelBuilder(String pathPrefix, Identifier location) {
         super(location);
         this.pathPrefix = pathPrefix;
     }
 
-    public ModelBuilder parent(ResourceLocation loc) {
+    public ModelBuilder parent(Identifier loc) {
         this.parent = new ModelFile(Mod.expandLoc(pathPrefix, loc));
         return this;
     }
@@ -35,17 +36,17 @@ public class ModelBuilder extends ModelFile{
     }
 
     public ModelBuilder parent(String fullLoc) {
-        return parent(new ResourceLocation(fullLoc));
+        return parent(new Identifier(fullLoc));
     }
 
-    public ModelBuilder texture(String key, ResourceLocation loc) {
+    public ModelBuilder texture(String key, Identifier loc) {
         loc = Mod.expandLoc(pathPrefix, loc);
         textures.put(key, loc);
         return this;
     }
 
     public ModelBuilder texture(String key, String loc) {
-        return texture(key, new ResourceLocation(loc));
+        return texture(key, new Identifier(loc));
     }
 
     public ModelBuilder struct(Structure s) {

@@ -1,7 +1,7 @@
 package ma.util.datagen.model.elements;
 
 import com.google.common.base.Preconditions;
-import net.minecraft.util.Mth;
+import net.minecraft.util.math.MathHelper;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
@@ -21,7 +21,7 @@ public class CubeProperty implements TransformProperty<CubeProperty>{
     @Override
     public CubeProperty rotate(int dim, int count) {
         Preconditions.checkArgument(dim >= 0 && dim < 3);
-        float r = count * Mth.HALF_PI;
+        float r = count * MathHelper.HALF_PI;
         Quaternionf rotator = new Quaternionf();
         switch (dim) {
             case 0 -> rotator.rotationX(r);

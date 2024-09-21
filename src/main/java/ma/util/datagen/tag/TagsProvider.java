@@ -3,17 +3,16 @@ package ma.util.datagen.tag;
 import ma.core.Mod;
 import ma.util.datagen.ModDataProvider;
 import ma.util.datagen.ResourceType;
-import net.minecraft.data.CachedOutput;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
-
+import net.minecraft.data.DataWriter;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class TagsProvider<T extends Tag<T,?>> extends ModDataProvider<TagsProvider<T>> {
-    final Map<ResourceLocation, T> tags = new HashMap<>();
+    final Map<Identifier, T> tags = new HashMap<>();
     final String type;
     private final Supplier<T> builder;
 
@@ -23,18 +22,18 @@ public class TagsProvider<T extends Tag<T,?>> extends ModDataProvider<TagsProvid
         this.builder = builder;
     }
 
-    public T of(ResourceLocation loc) {
+    public T of(Identifier loc) {
         return tags.computeIfAbsent(loc, k -> builder.get());
     }
 
     public T of(TagKey<?> key) {
-        return of(key.location());
+        return of(key.id());
     }
 
     @Override
-    public CompletableFuture<?> run(CachedOutput cachedOutput) {
+    public CompletableFuture<?> run(DataWriter cachedOutput) {
         return getCollectedTask(tags.entrySet(), entry -> {
-            ResourceLocation loc = Mod.expandLoc(type, entry.getKey());
+            Identifier loc = Mod.expandLoc(type, entry.getKey());
             return getJsonWritingTask(loc, entry.getValue().toJson(), cachedOutput);
         });
     }

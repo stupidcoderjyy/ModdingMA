@@ -3,15 +3,15 @@ package ma.util.datagen.blockstate;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import ma.core.Mod;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Identifier;
 
 public class Model {
-    private final ResourceLocation path;
+    private final Identifier path;
     private final int[] rotation = new int[3];
     private boolean uvLock;
     private static final String[] rotationAxis = {"x", "y", "z"};
 
-    public Model(ResourceLocation path) {
+    public Model(Identifier path) {
         this.path = Mod.expandLoc("block", path);
     }
 

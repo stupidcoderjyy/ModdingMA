@@ -1,15 +1,15 @@
 package ma.core.element;
 
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 import java.util.function.Consumer;
+import net.minecraft.block.AbstractBlock.Settings;
 
 class BlockProperty {
-    final List<Consumer<Properties>> modifiers = new ArrayList<>();
+    final List<Consumer<Settings>> modifiers = new ArrayList<>();
     final boolean removeOnGet;
     private final BlockProperty parent;
 
@@ -18,8 +18,8 @@ class BlockProperty {
         this.parent = parent;
     }
 
-    Properties get() {
-        Properties p = Properties.of();
+    Settings get() {
+        Settings p = Settings.create();
         BlockProperty bp = this;
         Stack<BlockProperty> properties = new Stack<>();
         while (bp != null) {

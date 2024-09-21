@@ -4,8 +4,7 @@ import com.google.gson.JsonObject;
 import ma.core.Mod;
 import ma.util.datagen.ModDataProvider;
 import ma.util.datagen.ResourceType;
-import net.minecraft.data.CachedOutput;
-
+import net.minecraft.data.DataWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -32,7 +31,7 @@ public class LocalizationProvider extends ModDataProvider<LocalizationProvider> 
     }
 
     @Override
-    public CompletableFuture<?> run(CachedOutput cachedOutput) {
+    public CompletableFuture<?> run(DataWriter cachedOutput) {
         JsonObject obj = new JsonObject();
         var sorted = new TreeMap<>(localizations);
         sorted.forEach(obj::addProperty);

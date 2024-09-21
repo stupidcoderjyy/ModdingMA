@@ -1,11 +1,11 @@
 package ma.util.datagen.model;
 
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Identifier;
 
 public class ModelFile {
-    protected final ResourceLocation location;
+    protected final Identifier location;
 
-    public ModelFile(ResourceLocation location) {
+    public ModelFile(Identifier location) {
         this.location = location;
     }
 

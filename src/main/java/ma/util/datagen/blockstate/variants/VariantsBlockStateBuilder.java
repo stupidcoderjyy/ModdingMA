@@ -30,7 +30,7 @@ public class VariantsBlockStateBuilder implements IBuilderElement {
     }
 
     /**
-     * 添加面的状态变量，面的排列顺序同{@link net.minecraft.core.Direction}中保持一致
+     * 添加面的状态变量，面的排列顺序同{@link net.minecraft.util.math.Direction}中保持一致
      * @return 调用者
      */
     public VariantsBlockStateBuilder variantFacing() {

@@ -1,10 +1,11 @@
 package ma.util.datagen.model;
 
-import ma.core.Mod;
+import ma.init.Mod;
 import ma.util.datagen.ModDataProvider;
 import ma.util.datagen.ResourceType;
 import net.minecraft.data.DataWriter;
 import net.minecraft.util.Identifier;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;

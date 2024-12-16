@@ -1,10 +1,11 @@
 package ma.util.datagen.lang;
 
 import com.google.gson.JsonObject;
-import ma.core.Mod;
+import ma.init.Mod;
 import ma.util.datagen.ModDataProvider;
 import ma.util.datagen.ResourceType;
 import net.minecraft.data.DataWriter;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;

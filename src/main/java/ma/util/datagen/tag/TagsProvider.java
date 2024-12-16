@@ -1,11 +1,12 @@
 package ma.util.datagen.tag;
 
-import ma.core.Mod;
+import ma.init.Mod;
 import ma.util.datagen.ModDataProvider;
 import ma.util.datagen.ResourceType;
 import net.minecraft.data.DataWriter;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;

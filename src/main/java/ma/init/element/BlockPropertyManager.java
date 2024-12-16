@@ -1,9 +1,10 @@
-package ma.core.element;
+package ma.init.element;
+
+import net.minecraft.block.AbstractBlock.Settings;
 
 import java.util.Arrays;
 import java.util.Stack;
 import java.util.function.Consumer;
-import net.minecraft.block.AbstractBlock.Settings;
 
 class BlockPropertyManager {
     private final Stack<BlockProperty> properties = new Stack<>();

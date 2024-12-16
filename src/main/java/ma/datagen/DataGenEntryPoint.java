@@ -1,9 +1,7 @@
 package ma.datagen;
 
-import ma.datagen.lang.Language;
-import ma.datagen.model.BlockModels;
-import ma.datagen.model.BlockStates;
-import ma.datagen.model.ItemModels;
+import ma.init.Mod;
+import ma.init.registry.AbstractDef;
 import ma.util.datagen.DataProviders;
 import ma.util.datagen.ModDataProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -19,9 +17,7 @@ public class DataGenEntryPoint implements DataGeneratorEntrypoint {
     }
 
     private void buildData() {
-        ItemModels.build();
-        BlockModels.build();
-        BlockStates.build();
-        Language.build();
+        Mod.initElements();
+        AbstractDef.DEFINITIONS.forEach(AbstractDef::genData);
     }
 }

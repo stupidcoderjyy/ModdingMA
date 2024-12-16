@@ -1,26 +1,40 @@
-package ma.core.element;
+package ma.init.element;
 
-import ma.core.Mod;
+import ma.init.Mod;
+import ma.init.registry.AbstractItemDef;
+import ma.init.registry.ITranslatable;
+import ma.util.datagen.DataProviders;
+import ma.util.datagen.blockstate.Model;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-public class BlockDef<B extends Block> extends ItemDef<BlockItem> {
+public class BlockDef<B extends Block> extends AbstractItemDef<BlockItem, BlockDef<B>> implements ITranslatable<BlockDef<B>> {
     private static final BlockPropertyManager bpManager = new BlockPropertyManager();
-    public static final List<BlockDef<?>> MOD_BLOCKS = new ArrayList<>();
     public final B block;
 
     public BlockDef(Identifier loc, B block, BlockItem item) {
         super(loc, item);
         this.block = block;
-        MOD_BLOCKS.add(this);
+        modifyCommonRegistry(reg -> reg
+                .add(def -> Registry.register(Registries.BLOCK, def.loc, def.block)));
+        modifyDataGenRegistry(reg -> reg
+                .add(def -> DataProviders.MODEL_BLOCK.model(def.loc).parent("minecraft:block/cube_all").texture("all", def.loc))
+                .add(def -> DataProviders.BLOCK_STATE.variants(def.loc).condition(state -> new Model(def.loc)))
+                .add(def -> DataProviders.MODEL_ITEM.model(def.loc).parent(Mod.expandLoc("block", def.loc))));
+    }
+
+    @Override
+    public BlockDef<B> setName(String en_us, String zh_cn) {
+        return genLanguage("block", loc, en_us, zh_cn);
     }
 
     public BlockDef(Identifier loc, B block) {
@@ -32,7 +46,7 @@ public class BlockDef<B extends Block> extends ItemDef<BlockItem> {
         return new ItemStack(block, size);
     }
 
-    public static BlockDef<Block> cubeAll(String id) {
+    public static BlockDef<Block> simple(String id) {
         return block(id, Block::new);
     }
 

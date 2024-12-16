@@ -2,7 +2,7 @@ package ma.util.datagen.blockstate;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import ma.core.Mod;
+import ma.init.Mod;
 import net.minecraft.util.Identifier;
 
 public class Model {

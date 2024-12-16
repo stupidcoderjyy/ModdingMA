@@ -1,18 +1,21 @@
-package ma.core.registry;
+package ma.init.registry;
 
-import ma.core.element.BlockDef;
+import ma.init.element.BlockDef;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
 import net.minecraft.sound.BlockSoundGroup;
+
 import java.util.function.Consumer;
 
 public class ModBlocks {
     public static final BlockDef<Block> QUARTZ_BLOCK;
+    public static final BlockDef<Block> CONTROLLER;
 
     static {
         BlockDef.pushProp(Types.QUARTZ);
-        QUARTZ_BLOCK = BlockDef.cubeAll("quartz_block");
+        QUARTZ_BLOCK = BlockDef.simple("quartz_block").setName("Quartz Block", "赛特斯石英块");
+        CONTROLLER = BlockDef.simple("controller").setName("Controller", "控制器");
         BlockDef.popProp();
     }
 

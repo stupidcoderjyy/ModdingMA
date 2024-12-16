@@ -2,14 +2,13 @@ package ma.util.datagen.model;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonObject;
-import ma.core.Mod;
+import ma.init.Mod;
 import ma.util.datagen.model.elements.Structure;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class ModelBuilder extends ModelFile{
     public final Map<String, Identifier> textures = new HashMap<>();

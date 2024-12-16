@@ -1,12 +1,12 @@
-package ma.core.element;
+package ma.init.element;
 
+import net.minecraft.block.AbstractBlock.Settings;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 import java.util.function.Consumer;
-import net.minecraft.block.AbstractBlock.Settings;
 
 class BlockProperty {
     final List<Consumer<Settings>> modifiers = new ArrayList<>();

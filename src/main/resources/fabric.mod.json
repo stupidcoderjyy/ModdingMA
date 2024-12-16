@@ -14,10 +14,10 @@
 	"license": "CC0-1.0",
 	"environment": "*",
 	"entrypoints": {
-		"client": ["ma.core.ModClient"],
-		"server": ["com.example.core.ExampleServer"],
-        "fabric-datagen": ["ma.datagen.DataGenEntryPoint"]
-    },
+		"client": ["ma.init.Mod"],
+		"server": ["ma.init.Mod"],
+		"fabric-datagen": ["ma.datagen.DataGenEntryPoint"]
+	},
 	"mixins": ["mixin.json"],
 	"depends": {
 		"fabricloader": ">=0.14.18",

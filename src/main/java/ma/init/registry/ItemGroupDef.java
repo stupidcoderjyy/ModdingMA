@@ -1,9 +1,7 @@
-package ma.init.element;
+package ma.init.registry;
 
 import com.google.common.base.Preconditions;
 import ma.init.Mod;
-import ma.init.registry.AbstractDef;
-import ma.init.registry.ITranslatable;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroup;
@@ -36,7 +34,7 @@ public class ItemGroupDef extends AbstractDef<ItemGroupDef> implements ITranslat
 
     @Override
     public ItemGroupDef setName(String en_us, String zh_cn) {
-        return genLanguage(translationKey, en_us, zh_cn);
+        return genLanguage(this, translationKey, en_us, zh_cn);
     }
 
     public void add(ItemConvertible item) {

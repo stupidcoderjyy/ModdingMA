@@ -1,4 +1,4 @@
-package ma.init.element;
+package ma.init.registry;
 
 import net.minecraft.block.AbstractBlock.Settings;
 

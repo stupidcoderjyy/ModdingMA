@@ -1,6 +1,7 @@
-package ma.init.registry;
+package ma.init;
 
-import ma.init.element.BlockDef;
+import ma.block.ControllerBlock;
+import ma.init.registry.BlockDef;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
@@ -10,12 +11,12 @@ import java.util.function.Consumer;
 
 public class ModBlocks {
     public static final BlockDef<Block> QUARTZ_BLOCK;
-    public static final BlockDef<Block> CONTROLLER;
+    public static final BlockDef<ControllerBlock> CONTROLLER;
 
     static {
         BlockDef.pushProp(Types.QUARTZ);
         QUARTZ_BLOCK = BlockDef.simple("quartz_block").setName("Quartz Block", "赛特斯石英块");
-        CONTROLLER = BlockDef.simple("controller").setName("Controller", "控制器");
+        CONTROLLER = BlockDef.block("controller", ControllerBlock::new).setName("Controller", "控制器");
         BlockDef.popProp();
     }
 

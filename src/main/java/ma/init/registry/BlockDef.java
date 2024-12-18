@@ -1,8 +1,6 @@
-package ma.init.element;
+package ma.init.registry;
 
 import ma.init.Mod;
-import ma.init.registry.AbstractItemDef;
-import ma.init.registry.ITranslatable;
 import ma.util.datagen.DataProviders;
 import ma.util.datagen.blockstate.Model;
 import net.minecraft.block.AbstractBlock;
@@ -17,7 +15,7 @@ import net.minecraft.util.Identifier;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-public class BlockDef<B extends Block> extends AbstractItemDef<BlockItem, BlockDef<B>> implements ITranslatable<BlockDef<B>> {
+public final class BlockDef<B extends Block> extends AbstractItemDef<BlockItem, BlockDef<B>> implements ITranslatable<BlockDef<B>> {
     private static final BlockPropertyManager bpManager = new BlockPropertyManager();
     public final B block;
 
@@ -34,7 +32,7 @@ public class BlockDef<B extends Block> extends AbstractItemDef<BlockItem, BlockD
 
     @Override
     public BlockDef<B> setName(String en_us, String zh_cn) {
-        return genLanguage("block", loc, en_us, zh_cn);
+        return genLanguage(this,"block", loc, en_us, zh_cn);
     }
 
     public BlockDef(Identifier loc, B block) {
@@ -80,5 +78,10 @@ public class BlockDef<B extends Block> extends AbstractItemDef<BlockItem, BlockD
 
     public static void popProp() {
         bpManager.popProp();
+    }
+
+    @Override
+    public String toString() {
+        return "BlockDef(" + loc + ")";
     }
 }

@@ -1,6 +1,5 @@
 package ma.init.registry;
 
-import ma.init.element.ItemGroupDef;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
@@ -42,10 +41,5 @@ public abstract class AbstractItemDef<I extends Item, D extends AbstractItemDef<
 
     public static void storeInto(RegistryKey<ItemGroup> itemGroup) {
         curGroup = itemGroup;
-    }
-
-    @Override
-    public String toString() {
-        return "ItemDef(" + loc + ")";
     }
 }

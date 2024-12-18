@@ -1,6 +1,6 @@
-package ma.init.registry;
+package ma.init;
 
-import ma.init.element.ItemGroupDef;
+import ma.init.registry.ItemGroupDef;
 
 public class ModItemGroups {
     public static final ItemGroupDef MAIN;

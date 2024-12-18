@@ -7,13 +7,15 @@ import net.minecraft.util.Identifier;
 public interface ITranslatable<D extends AbstractDef<D>> {
     D setName(String en_us, String zh_cn);
 
-    default D genLanguage(String prefix, Identifier loc, String en_us, String zh_cn) {
-        return genLanguage(prefix + "." + Mod.MOD_ID + "." + loc.getPath(), en_us, zh_cn);
+    default D genLanguage(D def, String prefix, Identifier loc, String en_us, String zh_cn) {
+        return genLanguage(def, prefix + "." + Mod.MOD_ID + "." + loc.getPath(), en_us, zh_cn);
     }
 
-    default D genLanguage(String key, String en_us, String zh_cn) {
-        DataProviders.LANG_EN_US.register(key, en_us);
-        DataProviders.LANG_ZH_CN.register(key, zh_cn);
-        return (D) this;
+    default D genLanguage(D def, String key, String en_us, String zh_cn) {
+        return def.modifyDataGenRegistry(r -> r
+                .add(d -> {
+                    DataProviders.LANG_EN_US.register(key, en_us);
+                    DataProviders.LANG_ZH_CN.register(key, zh_cn);
+                }));
     }
 }

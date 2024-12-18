@@ -1,5 +1,6 @@
-package ma.init.registry;
+package ma.init;
 
+import ma.init.registry.ItemDef;
 import net.minecraft.item.Item;
 
 public class ModItems {

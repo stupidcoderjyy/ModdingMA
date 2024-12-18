@@ -4,33 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a9f385d-898e-437b-bfef-189cf6d84fff" name="Changes" comment="M1 数据生成">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/init/registry/ModItemGroups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="9a9f385d-898e-437b-bfef-189cf6d84fff" name="Changes" comment="M4 方块实体-注册">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/core/Mod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/Mod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/core/ModClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/core/ModRegistry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/core/element/BlockDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/element/BlockDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/core/element/BlockProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/element/BlockProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/core/element/BlockPropertyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/element/BlockPropertyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/core/element/ItemDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/registry/AbstractItemDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/core/element/ModCreativeTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/element/ItemGroupDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/core/registry/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/registry/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/core/registry/ModCreativeTabs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/core/registry/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/registry/ModItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/datagen/DataGenEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/datagen/DataGenEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/datagen/lang/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/datagen/lang/Language.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/datagen/model/BlockModels.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/datagen/model/BlockStates.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/datagen/model/ItemModels.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/util/datagen/blockstate/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/util/datagen/blockstate/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/util/datagen/lang/LocalizationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/util/datagen/lang/LocalizationProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/util/datagen/model/ModelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/util/datagen/model/ModelBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/util/datagen/model/ModelProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/util/datagen/model/ModelProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/util/datagen/tag/TagsProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/util/datagen/tag/TagsProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/Mod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/Mod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/element/BlockDef.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/element/BlockProperty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/element/BlockPropertyManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/element/ItemGroupDef.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/registry/AbstractDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/registry/AbstractDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/registry/AbstractItemDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/registry/AbstractItemDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/registry/ITranslatable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/registry/ITranslatable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/registry/ItemDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/init/registry/ItemDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/registry/ModBlocks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/registry/ModItemGroups.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/init/registry/ModItems.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,30 +102,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.ModdingMA [genSourcesWithCfr].executor": "Run",
-    "Gradle.ModdingMA [runClient].executor": "Run",
-    "Gradle.ModdingMA [runDatagen].executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/JYY/IdeaProjects/ModdingMA/src/main/resources/assets/ma/textures/block",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.5471264",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.ModdingMA [genSourcesWithCfr].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ModdingMA [runClient].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ModdingMA [runDatagen].executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/JYY/IdeaProjects/ModdingMA/src/main/resources/assets/ma/textures/block&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5471264&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\JYY\IdeaProjects\ModdingMA\src\main\resources\assets\ma\textures\block" />
@@ -227,7 +215,12 @@
       <workItem from="1730357814485" duration="99000" />
       <workItem from="1734330838276" duration="5804000" />
       <workItem from="1734338706972" duration="2475000" />
-      <workItem from="1734357964213" duration="4951000" />
+      <workItem from="1734357964213" duration="5745000" />
+      <workItem from="1734363812623" duration="190000" />
+      <workItem from="1734364373348" duration="273000" />
+      <workItem from="1734496843631" duration="12994000" />
+      <workItem from="1734510277435" duration="94000" />
+      <workItem from="1734528142455" duration="1054000" />
     </task>
     <task id="LOCAL-00001" summary="Fabric-1.20.1-0.1 物品 自定义配方 基本数据生成">
       <option name="closed" value="true" />
@@ -277,7 +270,39 @@
       <option name="project" value="LOCAL" />
       <updated>1725079855902</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="重构注册系统">
+      <option name="closed" value="true" />
+      <created>1734363027554</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734363027554</updated>
+    </task>
+    <task id="LOCAL-00008" summary="M4 方块实体-注册">
+      <option name="closed" value="true" />
+      <created>1734508935578</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1734508935578</updated>
+    </task>
+    <task id="LOCAL-00009" summary="M4 方块实体-注册">
+      <option name="closed" value="true" />
+      <created>1734509902811</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1734509902811</updated>
+    </task>
+    <task id="LOCAL-00010" summary="M4 方块实体-注册">
+      <option name="closed" value="true" />
+      <created>1734528605613</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734528605613</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,12 +314,19 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="95" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="113" />
+                  <entry key="Table.GitHub.CommitStatus.ColumnIdWidth" value="54" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="M0" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -312,8 +344,22 @@
     <MESSAGE value="Fabric-1.20.1-0.1.1 楼梯、台阶和墙方块的快捷生成" />
     <MESSAGE value="创建项目" />
     <MESSAGE value="M0 简单物品" />
-    <option name="LAST_COMMIT_MESSAGE" value="M0 简单物品" />
+    <MESSAGE value="重构注册系统" />
+    <MESSAGE value="M4 方块实体-注册" />
+    <option name="LAST_COMMIT_MESSAGE" value="M4 方块实体-注册" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>jar://$PROJECT_DIR$/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-30625ecf84/1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2/minecraft-merged-30625ecf84-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2-sources.jar!/net/minecraft/item/ItemStack.java</url>
+          <line>225</line>
+          <properties field="count" class="net.minecraft.item.ItemStack" />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

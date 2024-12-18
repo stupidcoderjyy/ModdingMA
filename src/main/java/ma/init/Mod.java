@@ -1,8 +1,5 @@
 package ma.init;
 
-import ma.init.registry.ModBlocks;
-import ma.init.registry.ModItemGroups;
-import ma.init.registry.ModItems;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.DedicatedServerModInitializer;
 import net.minecraft.util.Identifier;
@@ -60,5 +57,6 @@ public class Mod implements ClientModInitializer, DedicatedServerModInitializer 
         ModItemGroups.init();
         ModItems.init();
         ModBlocks.init();
+        ModBlockEntities.init();
     }
 }

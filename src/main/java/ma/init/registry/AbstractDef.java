@@ -1,10 +1,12 @@
 package ma.init.registry;
 
+import ma.init.Mod;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class AbstractDef<D extends AbstractDef<D>> {
+public abstract class AbstractDef<D extends AbstractDef<D>> {
     public static final List<AbstractDef<?>> DEFINITIONS = new ArrayList<>();
     private RegistryComponent<D> clientRegistry = new RegistryComponent<>(() -> this + "(client)");
     private RegistryComponent<D> serverRegistry = new RegistryComponent<>(() -> this + "(server)");
@@ -64,7 +66,9 @@ public class AbstractDef<D extends AbstractDef<D>> {
     }
 
     public D modifyDataGenRegistry(Consumer<RegistryComponent<D>> handler) {
-        handler.accept(dataGenRegistry);
+        if (Mod.ENV_DATA_GEN) {
+            handler.accept(dataGenRegistry);
+        }
         return (D)this;
     }
 
